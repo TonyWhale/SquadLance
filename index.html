@@ -1,1 +1,1188 @@
-woih4t954htwgpwhg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FIX 8: Meta title + description -->
+  <title>Squadlance — Freelance power. Team precision.</title>
+  <meta name="description" content="Squadlance is a handpicked creative agency offering video editing, graphic design, scriptwriting and sound design. Built for brands and creators who want a full team, not a solo freelancer.">
+  <link rel="canonical" href="https://tonywhale.github.io/SquadLance/">
+
+  <!-- FIX 8: Open Graph tags (controls WhatsApp / social previews) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tonywhale.github.io/SquadLance/">
+  <meta property="og:title" content="Squadlance — Freelance power. Team precision.">
+  <meta property="og:description" content="A handpicked creative squad offering video editing, graphic design, scriptwriting and sound design. Real team. Real results.">
+  <!-- TODO: Create a 1200x630 og-image.jpg and upload to your GitHub repo, then update this path -->
+  <meta property="og:image" content="https://tonywhale.github.io/SquadLance/og-image.jpg">
+  <meta property="og:site_name" content="Squadlance">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- FIX 8: Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Squadlance — Freelance power. Team precision.">
+  <meta name="twitter:description" content="Video editing, graphic design, scriptwriting & sound design. A full squad, not a solo freelancer.">
+  <meta name="twitter:image" content="https://tonywhale.github.io/SquadLance/og-image.jpg">
+
+  <!-- FIX 6: Google Fonts — Orbitron (headings) + Rajdhani (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.29.0/dist/tabler-icons.min.css">
+
+  <!-- AOS scroll animations (lightweight, ~13kb) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0D0D1A;
+      --violet:  #7C3AED;
+      --lav:     #C4B5FD;
+      --purple:  #A78BFA;
+      --white:   #FFFFFF;
+      --nav-h:   62px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─────────────────────────────────────── */
+    .sq-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: var(--nav-h);
+      background: rgba(13,13,26,0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 0.5px solid rgba(124,58,237,0.3);
+      transition: background 0.3s;
+    }
+
+    .sq-logo {
+      font-family: 'Orbitron', monospace;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--lav);
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .sq-nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .sq-nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .sq-nav-links a:hover { color: var(--lav); }
+
+    .sq-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .sq-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--lav);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────── */
+    .sq-btn {
+      background: var(--violet);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Rajdhani', sans-serif;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .sq-btn:hover { background: #6D28D9; transform: translateY(-1px); }
+
+    .sq-btn-outline {
+      background: transparent;
+      color: var(--lav);
+      border: 0.5px solid var(--violet);
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Rajdhani', sans-serif;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .sq-btn-outline:hover { background: rgba(124,58,237,0.12); transform: translateY(-1px); }
+
+    /* ─── HERO ─────────────────────────────────────── */
+    .sq-hero {
+      padding: 88px 32px 68px;
+      text-align: center;
+      background: linear-gradient(180deg, #0D0D1A 0%, #110D22 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sq-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 640px;
+      height: 420px;
+      background: radial-gradient(ellipse, rgba(124,58,237,0.14) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
+    .sq-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(124,58,237,0.15);
+      color: var(--lav);
+      border: 0.5px solid rgba(124,58,237,0.4);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 26px;
+    }
+
+    /* FIX: Hero h1 scaled from 32px → 48px */
+    .sq-hero h1 {
+      font-family: 'Orbitron', monospace;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 20px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sq-hero h1 span { color: var(--purple); }
+
+    .sq-hero p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.55);
+      max-width: 500px;
+      margin: 0 auto 34px;
+      line-height: 1.7;
+    }
+
+    .sq-hero-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 56px;
+    }
+
+    .sq-stats {
+      display: flex;
+      justify-content: center;
+      gap: 52px;
+      flex-wrap: wrap;
+    }
+
+    .sq-stat { text-align: center; }
+
+    .sq-stat-num {
+      font-family: 'Orbitron', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--lav);
+    }
+
+    .sq-stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 3px;
+    }
+
+    /* ─── SECTION WRAPPERS ────────────────────────── */
+    .sq-section {
+      padding: 60px 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sq-section-alt {
+      background: rgba(255,255,255,0.015);
+    }
+
+    .sq-section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 32px;
+    }
+
+    .sq-section-title {
+      font-family: 'Orbitron', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .sq-section-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 28px;
+    }
+
+    .sq-divider {
+      width: 36px;
+      height: 2px;
+      background: var(--violet);
+      margin-bottom: 28px;
+      border-radius: 2px;
+    }
+
+    /* ─── SERVICES ─────────────────────────────────── */
+    .sq-services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+    }
+
+    .sq-service-card {
+      background: rgba(124,58,237,0.07);
+      border: 0.5px solid rgba(124,58,237,0.25);
+      border-radius: 12px;
+      padding: 20px 16px;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      cursor: default;
+    }
+
+    .sq-service-card:hover {
+      border-color: rgba(124,58,237,0.6);
+      background: rgba(124,58,237,0.13);
+      transform: translateY(-2px);
+    }
+
+    .sq-service-icon { font-size: 24px; color: var(--purple); margin-bottom: 12px; }
+    .sq-service-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 5px; }
+    .sq-service-desc { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+    /* ─── TEAM ─────────────────────────────────────── */
+    .sq-team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px;
+    }
+
+    .sq-team-card {
+      background: rgba(255,255,255,0.04);
+      border: 0.5px solid rgba(124,58,237,0.2);
+      border-radius: 12px;
+      padding: 22px 18px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .sq-team-card:hover { border-color: rgba(124,58,237,0.5); }
+
+    /* FIX 3: Open position cards replace placeholder "Co-worker" cards */
+    .sq-team-card.open {
+      background: transparent;
+      border: 0.5px dashed rgba(124,58,237,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 170px;
+      gap: 8px;
+    }
+
+    .sq-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(124,58,237,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', monospace;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--lav);
+      margin: 0 auto 12px;
+      border: 1.5px solid rgba(124,58,237,0.5);
+    }
+
+    .sq-open-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(124,58,237,0.08);
+      border: 1px dashed rgba(124,58,237,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: rgba(124,58,237,0.5);
+    }
+
+    .sq-team-name { font-size: 14px; font-weight: 600; color: #fff; }
+    .sq-team-role { font-size: 12px; color: var(--purple); margin-top: 3px; }
+    .sq-open-label { font-size: 11px; color: rgba(255,255,255,0.3); }
+    .sq-open-role { font-size: 13px; color: rgba(124,58,237,0.7); font-weight: 500; }
+
+    .sq-founder-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(124,58,237,0.2);
+      color: var(--lav);
+      border-radius: 10px;
+      font-size: 10px;
+      padding: 2px 8px;
+      margin-top: 6px;
+    }
+
+    .sq-team-socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    /* FIX 4: Team social links now have real hrefs */
+    .sq-team-socials a {
+      font-size: 17px;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .sq-team-socials a:hover { color: var(--purple); }
+
+    /* ─── PROCESS ──────────────────────────────────── */
+    .sq-process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+    }
+
+    .sq-step {
+      text-align: center;
+      padding: 0 10px;
+      position: relative;
+    }
+
+    /* Connecting line between steps */
+    .sq-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: calc(50% + 22px);
+      right: calc(-50% + 22px);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(124,58,237,0.6) 0%, rgba(124,58,237,0.2) 100%);
+      z-index: 0;
+    }
+
+    .sq-step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(124,58,237,0.15);
+      border: 0.5px solid var(--violet);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--lav);
+      margin: 0 auto 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sq-step-title { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 5px; }
+    .sq-step-desc { font-size: 11px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+
+    /* ─── PORTFOLIO PLACEHOLDER ────────────────────── */
+    .sq-portfolio-placeholder {
+      text-align: center;
+      padding: 48px 24px;
+      border: 0.5px dashed rgba(124,58,237,0.3);
+      border-radius: 12px;
+    }
+
+    .sq-portfolio-placeholder i {
+      font-size: 36px;
+      color: rgba(124,58,237,0.35);
+      margin-bottom: 16px;
+    }
+
+    .sq-portfolio-placeholder h3 {
+      font-family: 'Orbitron', monospace;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
+
+    .sq-portfolio-placeholder p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+      max-width: 380px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    /* ─── PRICING ──────────────────────────────────── */
+    .sq-pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+
+    .sq-price-card {
+      background: rgba(255,255,255,0.03);
+      border: 0.5px solid rgba(124,58,237,0.2);
+      border-radius: 12px;
+      padding: 24px 18px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .sq-price-card:hover { border-color: rgba(124,58,237,0.55); transform: translateY(-2px); }
+
+    .sq-price-card.featured {
+      border: 1.5px solid var(--violet);
+      background: rgba(124,58,237,0.08);
+    }
+
+    .sq-price-popular {
+      font-size: 10px;
+      background: rgba(124,58,237,0.25);
+      color: var(--lav);
+      border-radius: 10px;
+      padding: 2px 10px;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .sq-price-plan {
+      font-family: 'Orbitron', monospace;
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .sq-price-amount {
+      font-family: 'Orbitron', monospace;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--lav);
+      margin: 10px 0 4px;
+    }
+
+    .sq-price-amount span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 400;
+    }
+
+    .sq-price-desc { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 18px; }
+
+    .sq-price-features { list-style: none; margin-bottom: 20px; }
+
+    .sq-price-features li {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sq-price-features li i { color: var(--violet); font-size: 14px; }
+
+    /* ─── PROMISE SECTION (replaces fake testimonials) ── */
+    .sq-promise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .sq-promise-card {
+      background: rgba(124,58,237,0.06);
+      border: 0.5px solid rgba(124,58,237,0.2);
+      border-radius: 12px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+
+    .sq-promise-icon { font-size: 28px; color: var(--violet); margin-bottom: 12px; }
+
+    .sq-promise-title {
+      font-family: 'Orbitron', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--lav);
+      margin-bottom: 8px;
+    }
+
+    .sq-promise-desc { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.55; }
+
+    .sq-promise-note {
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+      padding: 16px 20px;
+      border: 0.5px dashed rgba(124,58,237,0.25);
+      border-radius: 10px;
+    }
+
+    .sq-promise-note a { color: var(--purple); text-decoration: none; }
+    .sq-promise-note a:hover { text-decoration: underline; }
+
+    /* ─── CTA + CONTACT FORM ────────────────────────── */
+    .sq-cta {
+      background: rgba(124,58,237,0.08);
+      border-top: 0.5px solid rgba(124,58,237,0.3);
+      padding: 64px 32px;
+      text-align: center;
+    }
+
+    .sq-cta h2 {
+      font-family: 'Orbitron', monospace;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .sq-cta > p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 36px;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FIX 7: Contact form replaces Gmail button */
+    .sq-form {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .sq-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .sq-input, .sq-select, .sq-textarea {
+      background: rgba(255,255,255,0.05);
+      border: 0.5px solid rgba(124,58,237,0.3);
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-size: 14px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 500;
+      color: #fff;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s;
+    }
+
+    .sq-input::placeholder, .sq-textarea::placeholder { color: rgba(255,255,255,0.28); }
+    .sq-input:focus, .sq-select:focus, .sq-textarea:focus { border-color: var(--violet); }
+
+    .sq-select { -webkit-appearance: none; cursor: pointer; }
+    .sq-select option { background: #1a1040; color: #fff; }
+
+    .sq-textarea { min-height: 100px; resize: vertical; }
+
+    .sq-form-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .sq-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(37,211,102,0.1);
+      border: 0.5px solid rgba(37,211,102,0.35);
+      color: #25D366;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Rajdhani', sans-serif;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .sq-whatsapp-btn:hover { background: rgba(37,211,102,0.18); }
+
+    .sq-form-success {
+      display: none;
+      color: var(--purple);
+      font-size: 14px;
+      padding: 14px;
+      border: 0.5px solid rgba(124,58,237,0.4);
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    /* ─── FOOTER ───────────────────────────────────── */
+    .sq-footer {
+      background: #06060f;
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-top: 0.5px solid rgba(124,58,237,0.2);
+    }
+
+    .sq-footer-logo {
+      font-family: 'Orbitron', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--lav);
+      text-decoration: none;
+    }
+
+    .sq-footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+    .sq-footer-links { display: flex; gap: 18px; }
+
+    /* FIX 5: Footer links now have real hrefs */
+    .sq-footer-links a {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .sq-footer-links a:hover { color: var(--lav); }
+
+    /* ─── WHATSAPP FAB ─────────────────────────────── */
+    /* FIX 1: Replace placeholder number below */
+    .sq-fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 52px;
+      height: 52px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.28);
+      transition: transform 0.2s, box-shadow 0.2s;
+      z-index: 200;
+    }
+
+    .sq-fab:hover { transform: scale(1.08); box-shadow: 0 6px 26px rgba(37,211,102,0.38); }
+
+    /* ─── MOBILE ───────────────────────────────────── */
+    @media (max-width: 768px) {
+      .sq-nav { padding: 0 20px; }
+      .sq-nav-links { display: none; }
+      .sq-nav-links.open {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0; right: 0;
+        background: rgba(10,10,22,0.98);
+        padding: 24px 24px;
+        border-bottom: 0.5px solid rgba(124,58,237,0.2);
+        z-index: 99;
+      }
+      .sq-hamburger { display: flex; }
+      .sq-hero { padding: 60px 20px 48px; }
+      .sq-hero h1 { font-size: 28px; }
+      .sq-stats { gap: 28px; }
+      .sq-section { padding: 44px 20px; }
+      .sq-section-inner { padding: 44px 20px; }
+      .sq-cta { padding: 48px 20px; }
+      .sq-form-row { grid-template-columns: 1fr; }
+      .sq-footer { flex-direction: column; text-align: center; }
+      .sq-process { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .sq-step:not(:last-child)::after { display: none; }
+      .sq-fab { bottom: 18px; right: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── NAV ─────────────────────────────────────── -->
+  <!-- FIX 4: All nav links now scroll to their sections -->
+  <nav class="sq-nav" id="sq-nav">
+    <a href="#home" class="sq-logo">Squadlance</a>
+    <div class="sq-nav-links" id="sq-nav-links">
+      <a href="#services">Services</a>
+      <a href="#team">Team</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a href="#contact" class="sq-btn">Hire the Squad</a>
+      <button class="sq-hamburger" id="sq-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────── -->
+  <section class="sq-hero" id="home">
+    <div class="sq-hero-badge" data-aos="fade-down" data-aos-duration="600">
+      <i class="ti ti-bolt" aria-hidden="true"></i> Freelance power. Team precision.
+    </div>
+    <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+      Creative work done by a<br><span>squad that moves together</span>
+    </h1>
+    <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+      We are not solo guns. Squadlance is a handpicked team of creatives — video editors, designers, writers & more — ready to bring your vision to life.
+    </p>
+    <div class="sq-hero-btns" data-aos="fade-up" data-aos-duration="700" data-aos-delay="280">
+      <a href="#contact" class="sq-btn">Hire Our Squad</a>
+      <a href="#portfolio" class="sq-btn-outline">See Our Work</a>
+    </div>
+    <!-- FIX 9: Honest stats — no inflated 50+ projects on launch day -->
+    <div class="sq-stats" data-aos="fade-up" data-aos-duration="700" data-aos-delay="360">
+      <div class="sq-stat">
+        <div class="sq-stat-num" data-count="4" data-suffix="+">4+</div>
+        <div class="sq-stat-label">Years experience</div>
+      </div>
+      <div class="sq-stat">
+        <div class="sq-stat-num" data-count="6">6</div>
+        <div class="sq-stat-label">Services offered</div>
+      </div>
+      <div class="sq-stat">
+        <div class="sq-stat-num">∞</div>
+        <div class="sq-stat-label">Revisions guaranteed</div>
+      </div>
+      <div class="sq-stat">
+        <div class="sq-stat-num">24h</div>
+        <div class="sq-stat-label">Response time</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─────────────────────────────────── -->
+  <section id="services">
+    <div class="sq-section">
+      <div class="sq-section-title" data-aos="fade-up">What we do</div>
+      <div class="sq-section-sub" data-aos="fade-up" data-aos-delay="60">End-to-end creative services for brands &amp; creators</div>
+      <div class="sq-divider" data-aos="fade-up" data-aos-delay="100"></div>
+      <div class="sq-services-grid">
+        <div class="sq-service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="sq-service-icon"><i class="ti ti-video" aria-hidden="true"></i></div>
+          <div class="sq-service-title">Video editing</div>
+          <div class="sq-service-desc">Cinematic edits, Reels, YouTube &amp; short-form content</div>
+        </div>
+        <div class="sq-service-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="sq-service-icon"><i class="ti ti-palette" aria-hidden="true"></i></div>
+          <div class="sq-service-title">Graphic design</div>
+          <div class="sq-service-desc">Thumbnails, branding, posters &amp; social visuals</div>
+        </div>
+        <div class="sq-service-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="sq-service-icon"><i class="ti ti-writing" aria-hidden="true"></i></div>
+          <div class="sq-service-title">Scriptwriting</div>
+          <div class="sq-service-desc">Engaging scripts for videos, ads &amp; social media</div>
+        </div>
+        <div class="sq-service-card" data-aos="fade-up" data-aos-delay="180">
+          <div class="sq-service-icon"><i class="ti ti-music" aria-hidden="true"></i></div>
+          <div class="sq-service-title">Sound design</div>
+          <div class="sq-service-desc">Audio mixing, sound effects &amp; music production</div>
+        </div>
+        <div class="sq-service-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="sq-service-icon"><i class="ti ti-brand-instagram" aria-hidden="true"></i></div>
+          <div class="sq-service-title">Social media</div>
+          <div class="sq-service-desc">Strategy, content planning &amp; account management</div>
+        </div>
+        <div class="sq-service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="sq-service-icon"><i class="ti ti-device-desktop" aria-hidden="true"></i></div>
+          <div class="sq-service-title">Web design</div>
+          <div class="sq-service-desc">Portfolio sites, landing pages &amp; UI design</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TEAM ──────────────────────────────────────── -->
+  <!-- FIX 3: Placeholder "Co-worker" cards replaced with honest open position cards -->
+  <div class="sq-section-alt">
+    <div class="sq-section-inner" id="team">
+      <div class="sq-section-title" data-aos="fade-up">Meet the squad</div>
+      <div class="sq-section-sub" data-aos="fade-up" data-aos-delay="60">Real people. Real skills. No middlemen.</div>
+      <div class="sq-divider" data-aos="fade-up" data-aos-delay="100"></div>
+      <div class="sq-team-grid">
+        <div class="sq-team-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="sq-avatar">TW</div>
+          <div class="sq-team-name">Tony Whale</div>
+          <div class="sq-team-role">Video Editor &amp; Creative Director</div>
+          <div class="sq-founder-badge"><i class="ti ti-crown" aria-hidden="true"></i> Founder</div>
+          <!-- FIX 4: Team social links have real hrefs -->
+          <div class="sq-team-socials">
+            <a href="https://instagram.com/whale_creations" target="_blank" rel="noopener" aria-label="Tony on Instagram">
+              <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:tomedits316@gmail.com" aria-label="Email Tony">
+              <i class="ti ti-mail" aria-hidden="true"></i>
+            </a>
+            <a href="https://tonywhale.github.io/Tony-Whale" target="_blank" rel="noopener" aria-label="Tony's portfolio">
+              <i class="ti ti-world" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="sq-team-card open" data-aos="fade-up" data-aos-delay="80">
+          <div class="sq-open-icon"><i class="ti ti-plus" aria-hidden="true"></i></div>
+          <div class="sq-open-label">Open position</div>
+          <div class="sq-open-role">Graphic Designer</div>
+        </div>
+        <div class="sq-team-card open" data-aos="fade-up" data-aos-delay="160">
+          <div class="sq-open-icon"><i class="ti ti-plus" aria-hidden="true"></i></div>
+          <div class="sq-open-label">Open position</div>
+          <div class="sq-open-role">Scriptwriter</div>
+        </div>
+        <div class="sq-team-card open" data-aos="fade-up" data-aos-delay="240">
+          <div class="sq-open-icon"><i class="ti ti-plus" aria-hidden="true"></i></div>
+          <div class="sq-open-label">Open position</div>
+          <div class="sq-open-role">Sound Designer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PROCESS ───────────────────────────────────── -->
+  <section id="process">
+    <div class="sq-section">
+      <div class="sq-section-title" data-aos="fade-up">How we work</div>
+      <div class="sq-section-sub" data-aos="fade-up" data-aos-delay="60">Simple, clear, and always on time</div>
+      <div class="sq-divider" data-aos="fade-up" data-aos-delay="100"></div>
+      <div class="sq-process" data-aos="fade-up" data-aos-delay="150">
+        <div class="sq-step">
+          <div class="sq-step-num">1</div>
+          <div class="sq-step-title">Brief us</div>
+          <div class="sq-step-desc">Tell us your goals and requirements</div>
+        </div>
+        <div class="sq-step">
+          <div class="sq-step-num">2</div>
+          <div class="sq-step-title">We plan</div>
+          <div class="sq-step-desc">We assign the right squad members</div>
+        </div>
+        <div class="sq-step">
+          <div class="sq-step-num">3</div>
+          <div class="sq-step-title">We create</div>
+          <div class="sq-step-desc">Full focus and precision on your project</div>
+        </div>
+        <div class="sq-step">
+          <div class="sq-step-num">4</div>
+          <div class="sq-step-title">You review</div>
+          <div class="sq-step-desc">Feedback until you are 100% happy</div>
+        </div>
+        <div class="sq-step">
+          <div class="sq-step-num">5</div>
+          <div class="sq-step-title">Delivered</div>
+          <div class="sq-step-desc">Final files on time, every time</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PORTFOLIO PLACEHOLDER ─────────────────────── -->
+  <!-- Phase 3: Replace this placeholder with real project cards -->
+  <div class="sq-section-alt">
+    <div class="sq-section-inner" id="portfolio">
+      <div class="sq-section-title" data-aos="fade-up">Our work</div>
+      <div class="sq-section-sub" data-aos="fade-up" data-aos-delay="60">Portfolio in progress — we're documenting every project</div>
+      <div class="sq-divider" data-aos="fade-up" data-aos-delay="100"></div>
+      <div class="sq-portfolio-placeholder" data-aos="fade-up" data-aos-delay="150">
+        <i class="ti ti-layout-grid" aria-hidden="true"></i>
+        <h3>Portfolio coming soon</h3>
+        <p>We're building our portfolio with our first clients. Check back soon — or be one of the first to work with us.</p>
+        <a href="#contact" class="sq-btn">Work with us first</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PRICING ───────────────────────────────────── -->
+  <!-- FIX (Important): Starter plan "2 revisions" updated to "Unlimited revisions" to match brand promise -->
+  <section id="pricing">
+    <div class="sq-section">
+      <div class="sq-section-title" data-aos="fade-up">Pricing</div>
+      <div class="sq-section-sub" data-aos="fade-up" data-aos-delay="60">Transparent. No hidden fees. No surprises.</div>
+      <div class="sq-divider" data-aos="fade-up" data-aos-delay="100"></div>
+      <div class="sq-pricing">
+        <div class="sq-price-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="sq-price-plan">Starter</div>
+          <div class="sq-price-amount">₹4,999 <span>/project</span></div>
+          <div class="sq-price-desc">Perfect for small creators</div>
+          <ul class="sq-price-features">
+            <li><i class="ti ti-check" aria-hidden="true"></i> 1 video edit</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> Thumbnail design</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> Unlimited revisions</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> 3 day delivery</li>
+          </ul>
+          <a href="#contact" class="sq-btn-outline" style="width:100%;text-align:center;display:block;">Get started</a>
+        </div>
+        <div class="sq-price-card featured" data-aos="fade-up" data-aos-delay="80">
+          <div class="sq-price-popular">Most popular</div>
+          <div class="sq-price-plan">Squad</div>
+          <div class="sq-price-amount">₹12,999 <span>/project</span></div>
+          <div class="sq-price-desc">Best for brands &amp; YouTubers</div>
+          <ul class="sq-price-features">
+            <li><i class="ti ti-check" aria-hidden="true"></i> 3 video edits</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> Motion graphics</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> Sound design</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> Unlimited revisions</li>
+          </ul>
+          <a href="#contact" class="sq-btn" style="width:100%;text-align:center;display:block;">Hire the squad</a>
+        </div>
+        <div class="sq-price-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="sq-price-plan">Full Squad</div>
+          <div class="sq-price-amount">₹24,999 <span>/month</span></div>
+          <div class="sq-price-desc">For agencies &amp; growing brands</div>
+          <ul class="sq-price-features">
+            <li><i class="ti ti-check" aria-hidden="true"></i> Unlimited projects</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> All services included</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> Dedicated manager</li>
+            <li><i class="ti ti-check" aria-hidden="true"></i> Priority delivery</li>
+          </ul>
+          <a href="#contact" class="sq-btn-outline" style="width:100%;text-align:center;display:block;">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── OUR PROMISE (replaces fake testimonials) ──── -->
+  <!-- FIX 2: All fake testimonials removed. Replaced with honest commitments. -->
+  <!-- Add real testimonials here once you have them from actual clients. -->
+  <div class="sq-section-alt">
+    <div class="sq-section-inner" id="promise">
+      <div class="sq-section-title" data-aos="fade-up">Our promise to you</div>
+      <div class="sq-section-sub" data-aos="fade-up" data-aos-delay="60">We're just getting started — here's what every client will always get</div>
+      <div class="sq-divider" data-aos="fade-up" data-aos-delay="100"></div>
+      <div class="sq-promise-grid">
+        <div class="sq-promise-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="sq-promise-icon"><i class="ti ti-refresh" aria-hidden="true"></i></div>
+          <div class="sq-promise-title">Unlimited revisions</div>
+          <div class="sq-promise-desc">We don't stop until you love it. No cap on feedback rounds, ever.</div>
+        </div>
+        <div class="sq-promise-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="sq-promise-icon"><i class="ti ti-clock" aria-hidden="true"></i></div>
+          <div class="sq-promise-title">On-time delivery</div>
+          <div class="sq-promise-desc">Deadlines are a commitment, not a suggestion. We deliver when we say we will.</div>
+        </div>
+        <div class="sq-promise-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="sq-promise-icon"><i class="ti ti-message-circle" aria-hidden="true"></i></div>
+          <div class="sq-promise-title">Direct communication</div>
+          <div class="sq-promise-desc">No middlemen. You talk directly to the people working on your project.</div>
+        </div>
+      </div>
+      <div class="sq-promise-note" data-aos="fade-up" data-aos-delay="220">
+        Work with us first and <a href="#contact">share your experience →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CTA + CONTACT FORM ────────────────────────── -->
+  <!-- FIX 7: Contact form replaces tomedits316@gmail.com button -->
+  <!-- NOTE: Using existing Formspree key xaqkjqny. Create a new Squadlance form at formspree.io if needed. -->
+  <section id="contact" class="sq-cta">
+    <h2 data-aos="fade-up">Ready to work with the squad?</h2>
+    <p data-aos="fade-up" data-aos-delay="80">
+      Let's build something great together. Fill in your details and we'll get back within 24 hours.
+    </p>
+
+    <form class="sq-form" id="sq-form" action="https://formspree.io/f/xaqkjqny" method="POST"
+          data-aos="fade-up" data-aos-delay="160">
+      <input type="hidden" name="_subject" value="New Squadlance inquiry">
+      <div class="sq-form-row">
+        <input class="sq-input" type="text" name="name" placeholder="Your name" required>
+        <input class="sq-input" type="email" name="email" placeholder="Your email" required>
+      </div>
+      <select class="sq-select" name="service" required>
+        <option value="" disabled selected>What do you need?</option>
+        <option value="video">Video editing</option>
+        <option value="design">Graphic design</option>
+        <option value="script">Scriptwriting</option>
+        <option value="sound">Sound design</option>
+        <option value="package">Full creative package</option>
+        <option value="other">Something else</option>
+      </select>
+      <textarea class="sq-textarea" name="message" placeholder="Tell us about your project..."></textarea>
+      <div class="sq-form-actions">
+        <button type="submit" class="sq-btn">Send message</button>
+        <!-- FIX 1: REPLACE 91XXXXXXXXXX with your actual WhatsApp number (digits only, no + or spaces) -->
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Squadlance%2C%20I%20want%20to%20discuss%20a%20project"
+           class="sq-whatsapp-btn" target="_blank" rel="noopener">
+          <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> WhatsApp us
+        </a>
+      </div>
+      <div class="sq-form-success" id="sq-form-success">
+        Thanks! We'll get back to you within 24 hours. 🙌
+      </div>
+    </form>
+  </section>
+
+  <!-- ─── FOOTER ───────────────────────────────────── -->
+  <!-- FIX 5: Footer links now have real hrefs -->
+  <footer class="sq-footer">
+    <a href="#home" class="sq-footer-logo">Squadlance</a>
+    <div class="sq-footer-copy">© 2026 Squadlance. All rights reserved.</div>
+    <div class="sq-footer-links">
+      <a href="https://instagram.com/squad.lance" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tonywhale.github.io/Tony-Whale" target="_blank" rel="noopener">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <!-- FIX 1: WhatsApp FAB — REPLACE 91XXXXXXXXXX with your actual number (digits only) -->
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Squadlance%2C%20I%27m%20interested%20in%20working%20with%20you"
+     class="sq-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Init AOS
+    AOS.init({ once: true, duration: 600, offset: 60 });
+
+    // Sticky nav — darken on scroll
+    window.addEventListener('scroll', function () {
+      document.getElementById('sq-nav').style.background =
+        window.scrollY > 20 ? 'rgba(13,13,26,0.97)' : 'rgba(13,13,26,0.85)';
+    });
+
+    // Mobile hamburger toggle
+    var hamburger = document.getElementById('sq-hamburger');
+    var navLinks  = document.getElementById('sq-nav-links');
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+    });
+    // Close on nav link click
+    document.querySelectorAll('#sq-nav-links a').forEach(function (a) {
+      a.addEventListener('click', function () { navLinks.classList.remove('open'); });
+    });
+
+    // Stats counter animation
+    function countUp(el) {
+      var target = parseInt(el.getAttribute('data-count'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      if (!target) return;
+      var current = 0;
+      var step = Math.ceil(target / 28);
+      var timer = setInterval(function () {
+        current = Math.min(current + step, target);
+        el.textContent = current + suffix;
+        if (current >= target) clearInterval(timer);
+      }, 38);
+    }
+
+    var counterEls = document.querySelectorAll('[data-count]');
+    var counterObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          countUp(entry.target);
+          counterObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    counterEls.forEach(function (el) { counterObs.observe(el); });
+
+    // Contact form — AJAX submit to Formspree
+    var form    = document.getElementById('sq-form');
+    var success = document.getElementById('sq-form-success');
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        var res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          success.style.display = 'block';
+          btn.textContent = 'Sent ✓';
+        } else {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      } catch (err) {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+</html>
