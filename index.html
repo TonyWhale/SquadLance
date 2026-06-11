@@ -655,24 +655,6 @@
       margin-top: 4px;
     }
 
-    .sq-whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(37,211,102,0.1);
-      border: 0.5px solid rgba(37,211,102,0.35);
-      color: #25D366;
-      border-radius: 8px;
-      padding: 10px 20px;
-      font-size: 13px;
-      font-weight: 600;
-      font-family: 'Rajdhani', sans-serif;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .sq-whatsapp-btn:hover { background: rgba(37,211,102,0.18); }
-
     .sq-form-success {
       display: none;
       color: var(--purple);
@@ -720,27 +702,6 @@
 
     /* ─── WHATSAPP FAB ─────────────────────────────── */
     /* FIX 1: Replace placeholder number below */
-    .sq-fab {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 52px;
-      height: 52px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0 4px 18px rgba(37,211,102,0.28);
-      transition: transform 0.2s, box-shadow 0.2s;
-      z-index: 200;
-    }
-
-    .sq-fab:hover { transform: scale(1.08); box-shadow: 0 6px 26px rgba(37,211,102,0.38); }
-
     /* ─── MOBILE ───────────────────────────────────── */
     @media (max-width: 768px) {
       .sq-nav { padding: 0 20px; }
@@ -768,7 +729,7 @@
       .sq-footer { flex-direction: column; text-align: center; }
       .sq-process { grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .sq-step:not(:last-child)::after { display: none; }
-      .sq-fab { bottom: 18px; right: 18px; }
+
     }
   </style>
 </head>
@@ -1076,12 +1037,12 @@
       <textarea class="sq-textarea" name="message" placeholder="Tell us about your project..."></textarea>
       <div class="sq-form-actions">
         <button type="submit" class="sq-btn">Send message</button>
-        <!-- FIX 1: REPLACE 91XXXXXXXXXX with your actual WhatsApp number (digits only, no + or spaces) -->
-        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Squadlance%2C%20I%20want%20to%20discuss%20a%20project"
-           class="sq-whatsapp-btn" target="_blank" rel="noopener">
-          <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> WhatsApp us
-        </a>
       </div>
+      <p style="text-align:center;font-size:12px;color:rgba(255,255,255,0.28);margin-top:10px;">
+        or email us directly at
+        <!-- TODO: Replace with business email once Zoho is set up (e.g. hello@squadlance.com) -->
+        <a href="mailto:tomedits316@gmail.com" style="color:rgba(196,181,253,0.6);text-decoration:none;">tomedits316@gmail.com</a>
+      </p>
       <div class="sq-form-success" id="sq-form-success">
         Thanks! We'll get back to you within 24 hours. 🙌
       </div>
@@ -1100,11 +1061,7 @@
     </div>
   </footer>
 
-  <!-- FIX 1: WhatsApp FAB — REPLACE 91XXXXXXXXXX with your actual number (digits only) -->
-  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Squadlance%2C%20I%27m%20interested%20in%20working%20with%20you"
-     class="sq-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
-  </a>
+
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
