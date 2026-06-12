@@ -14,16 +14,76 @@
   <meta property="og:url" content="https://tonywhale.github.io/SquadLance/">
   <meta property="og:title" content="Squadlance — Freelance power. Team precision.">
   <meta property="og:description" content="A handpicked creative squad offering video editing, graphic design, scriptwriting and sound design. Real team. Real results.">
-  <!-- TODO: Create a 1200x630 og-image.jpg and upload to your GitHub repo, then update this path -->
   <meta property="og:image" content="https://tonywhale.github.io/SquadLance/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Squadlance">
   <meta property="og:locale" content="en_IN">
 
-  <!-- FIX 8: Twitter Card tags -->
+  <!-- Twitter Card tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Squadlance — Freelance power. Team precision.">
   <meta name="twitter:description" content="Video editing, graphic design, scriptwriting & sound design. A full squad, not a solo freelancer.">
   <meta name="twitter:image" content="https://tonywhale.github.io/SquadLance/og-image.jpg">
+
+  <!-- Google Search + Indexing -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="keywords" content="video editing India, graphic design freelancer, creative agency India, YouTube video editor, content creator services, scriptwriting, sound design, Squadlance, freelance creative team, video editor Madhya Pradesh, creative agency Madhya Pradesh">
+  <meta name="author" content="Tony Whale">
+  <meta name="language" content="en">
+
+  <!-- Browser + Mobile -->
+  <meta name="theme-color" content="#7C3AED">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Squadlance">
+
+  <!-- Geographic — helps Indian local search -->
+  <meta name="geo.region" content="IN">
+  <meta name="geo.placename" content="India">
+
+  <!-- Favicon + iOS home screen icon (uses your existing logo.png) -->
+  <link rel="icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- JSON-LD Structured Data — what Google reads for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Squadlance",
+    "url": "https://tonywhale.github.io/SquadLance/",
+    "logo": "https://tonywhale.github.io/SquadLance/logo.png",
+    "image": "https://tonywhale.github.io/SquadLance/og-image.jpg",
+    "description": "Squadlance is a handpicked creative agency offering video editing, graphic design, scriptwriting and sound design. Built for brands and creators who want a full team, not a solo freelancer.",
+    "foundingDate": "2026",
+    "founder": {
+      "@type": "Person",
+      "name": "Tony Whale",
+      "url": "https://tonywhale.github.io/Tony-Whale"
+    },
+    "sameAs": [
+      "https://www.instagram.com/squad.lance/"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "tomedits316@gmail.com",
+      "availableLanguage": "English"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Creative Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video Editing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graphic Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Scriptwriting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sound Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design" } }
+      ]
+    }
+  }
+  </script>
 
   <!-- FIX 6: Google Fonts — Orbitron (headings) + Rajdhani (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,6 +141,16 @@
       color: var(--lav);
       letter-spacing: 1px;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .sq-logo-img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      flex-shrink: 0;
     }
 
     .sq-nav-links {
@@ -739,7 +809,10 @@
   <!-- ─── NAV ─────────────────────────────────────── -->
   <!-- FIX 4: All nav links now scroll to their sections -->
   <nav class="sq-nav" id="sq-nav">
-    <a href="#home" class="sq-logo">Squadlance</a>
+    <a href="#home" class="sq-logo">
+      <img src="logo.png" alt="" width="28" height="28" class="sq-logo-img">
+      Squadlance
+    </a>
     <div class="sq-nav-links" id="sq-nav-links">
       <a href="#services">Services</a>
       <a href="#team">Team</a>
